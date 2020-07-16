@@ -30,4 +30,8 @@
     <ProjectReference Include="..\Be.Stateless.BizTalk.Abstractions\Be.Stateless.BizTalk.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="System.Runtime.Caching" />
+  </ItemGroup>
+
 </Project>
