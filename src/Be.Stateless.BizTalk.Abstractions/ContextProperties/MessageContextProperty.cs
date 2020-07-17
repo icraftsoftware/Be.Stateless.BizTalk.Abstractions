@@ -23,8 +23,6 @@ using Be.Stateless.BizTalk.Message.Extensions;
 using Microsoft.BizTalk.Message.Interop;
 using Microsoft.XLANGs.BaseTypes;
 
-#pragma warning disable 660,661
-
 namespace Be.Stateless.BizTalk.ContextProperties
 {
 	/// <summary>
@@ -47,7 +45,11 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	/// <seealso cref="BaseMessage.Promote{T}(IBaseMessage,MessageContextProperty{T,string},string)"/>
 	/// <seealso cref="BaseMessage.Promote{T,TV}(IBaseMessage,MessageContextProperty{T,TV},TV)"/>
 	[SuppressMessage("Usage", "CA2225:Operator overloads have named alternates")]
+#pragma warning disable CS0660 // Type defines operator == or operator != but does not override Object.Equals(object o)
+#pragma warning disable CS0661 // Type defines operator == or operator != but does not override Object.GetHashCode()
 	public class MessageContextProperty<T, TR> : IMessageContextProperty
+#pragma warning restore CS0661 // Type defines operator == or operator != but does not override Object.GetHashCode()
+#pragma warning restore CS0660 // Type defines operator == or operator != but does not override Object.Equals(object o)
 		where T : MessageContextPropertyBase, new()
 	{
 		#region Operators

@@ -22,7 +22,6 @@ using SBMessaging;
 
 namespace Be.Stateless.BizTalk.ContextProperties
 {
-	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
 	public static class SBMessagingProperties

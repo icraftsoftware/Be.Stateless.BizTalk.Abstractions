@@ -35,10 +35,9 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	/// It is detrimental to enable <see cref="BtsProperties.IsDynamicSend"/> when setting these properties at runtime.
 	/// </para>
 	/// </remarks>
-	[SuppressMessage("Design", "CA1052:Static holder types should be Static or NotInheritable")]
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
-	public class SftpProperties
+	public static class SftpProperties
 	{
 		/// <summary>
 		/// Remote SFTP folder path. Oddly enough, <see cref="FolderPath"/> is concealed in the <see cref="WCF"/> property schema

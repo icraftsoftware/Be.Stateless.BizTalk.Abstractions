@@ -28,7 +28,7 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	/// </summary>
 	/// <seealso href="http://msdn.microsoft.com/en-us/library/aa578516(BTS.10).aspx"/>
 	/// <seealso href="http://support.microsoft.com/kb/944532"/>
-	[SuppressMessage("ReSharper", "UnusedMember.Global")]
+	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 	public static class ErrorReportProperties
 	{
 		/// <summary>
