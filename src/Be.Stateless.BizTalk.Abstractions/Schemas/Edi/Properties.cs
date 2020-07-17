@@ -19,13 +19,14 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Xml;
+using Be.Stateless.BizTalk.Schemas;
 using Microsoft.XLANGs.BaseTypes;
 
 // ReSharper disable once CheckNamespace
 namespace EDI
 {
 	[Serializable]
-	[PropertyType(nameof(BGM1_1), NAMESPACE, "string", "")]
+	[PropertyType(nameof(BGM1_1), PropertySchemaNamespaces.Edi, "string", "")]
 	[PropertyGuid(@"2a0ba9ec-e3ed-44b8-a590-344e904f89ac")]
 	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	public sealed class BGM1_1 : MessageContextPropertyBase
@@ -38,14 +39,12 @@ namespace EDI
 
 		#endregion
 
-		internal const string NAMESPACE = "http://schemas.microsoft.com/Edi/PropertySchema";
-
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(BGM1_1), NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(BGM1_1), PropertySchemaNamespaces.Edi);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(MKS1), BGM1_1.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(MKS1), PropertySchemaNamespaces.Edi, "string", "System.String")]
 	[PropertyGuid(@"7386286c-ae36-49ab-b688-f66a57e33dbf")]
 	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	public sealed class MKS1 : MessageContextPropertyBase
@@ -59,6 +58,6 @@ namespace EDI
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MKS1), BGM1_1.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MKS1), PropertySchemaNamespaces.Edi);
 	}
 }

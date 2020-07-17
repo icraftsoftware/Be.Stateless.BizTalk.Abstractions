@@ -23,7 +23,7 @@ using Microsoft.XLANGs.BaseTypes;
 namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 {
 	[Serializable]
-	[PropertyType(nameof(ContextBuilderTypeName), NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(ContextBuilderTypeName), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"5f13dc2c-c8eb-4dff-aee0-c30ccde19a7c")]
 	public sealed class ContextBuilderTypeName : MessageContextPropertyBase
 	{
@@ -35,14 +35,12 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 
 		#endregion
 
-		internal const string NAMESPACE = "urn:schemas.stateless.be:biztalk:properties:system:2012:04";
-
 		[NonSerialized]
-		private static readonly XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ContextBuilderTypeName), NAMESPACE);
+		private static readonly XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ContextBuilderTypeName), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(CorrelationId), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(CorrelationId), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"5206a0a0-40e5-44f2-b6b0-069d0293e37a")]
 	public sealed class CorrelationId : MessageContextPropertyBase
 	{
@@ -55,11 +53,11 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(CorrelationId), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(CorrelationId), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(EnvironmentTag), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(EnvironmentTag), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"dce26d06-9a64-49ac-8651-03286a5cba2e")]
 	public sealed class EnvironmentTag : MessageContextPropertyBase
 	{
@@ -72,11 +70,11 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(EnvironmentTag), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(EnvironmentTag), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(MapTypeName), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(MapTypeName), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"522f0b3a-be08-458f-bd06-8bc28319a947")]
 	public sealed class MapTypeName : MessageContextPropertyBase
 	{
@@ -89,11 +87,11 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MapTypeName), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MapTypeName), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(MessageBodyStreamFactoryTypeName), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(MessageBodyStreamFactoryTypeName), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"7fec7d64-15ba-4f4d-ad95-33a380783197")]
 	public sealed class MessageBodyStreamFactoryTypeName : MessageContextPropertyBase
 	{
@@ -106,11 +104,11 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MessageBodyStreamFactoryTypeName), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MessageBodyStreamFactoryTypeName), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(MessageType), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(MessageType), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"e1c7ba1b-5e2a-4f15-81a2-8842dc31103a")]
 	public sealed class MessageType : MessageContextPropertyBase
 	{
@@ -123,11 +121,11 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MessageType), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MessageType), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(OutboundTransportLocation), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(OutboundTransportLocation), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"4c488b95-0750-4853-8ec0-299d25043992")]
 	public sealed class OutboundTransportLocation : MessageContextPropertyBase
 	{
@@ -140,11 +138,11 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(OutboundTransportLocation), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(OutboundTransportLocation), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(ReceiverName), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(ReceiverName), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"268786e1-7638-4e02-ad9c-c69b0deca23f")]
 	public sealed class ReceiverName : MessageContextPropertyBase
 	{
@@ -157,11 +155,11 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ReceiverName), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ReceiverName), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(SenderName), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(SenderName), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"1b669871-b481-4e4f-9a6a-d182c24c462e")]
 	public sealed class SenderName : MessageContextPropertyBase
 	{
@@ -174,11 +172,11 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(SenderName), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(SenderName), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(XmlTranslations), ContextBuilderTypeName.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(XmlTranslations), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
 	[PropertyGuid(@"53631fc8-c92a-459a-847a-99aef62d7cd4")]
 	public sealed class XmlTranslations : MessageContextPropertyBase
 	{
@@ -191,6 +189,6 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(XmlTranslations), ContextBuilderTypeName.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(XmlTranslations), PropertySchemaNamespaces.BizTalkFactory);
 	}
 }

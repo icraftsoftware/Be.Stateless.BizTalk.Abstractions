@@ -18,13 +18,14 @@
 
 using System;
 using System.Xml;
+using Be.Stateless.BizTalk.Schemas;
 using Microsoft.XLANGs.BaseTypes;
 
 // ReSharper disable once CheckNamespace
 namespace BTS
 {
 	[Serializable]
-	[PropertyType(nameof(ActualRetryCount), NAMESPACE, "int", "System.Int32")]
+	[PropertyType(nameof(ActualRetryCount), PropertySchemaNamespaces.System, "int", "System.Int32")]
 	[PropertyGuid(@"95e6968f-1887-40b4-aeaa-8ab36acf28ed")]
 	public sealed class ActualRetryCount : MessageContextPropertyBase
 	{
@@ -36,14 +37,12 @@ namespace BTS
 
 		#endregion
 
-		internal const string NAMESPACE = "http://schemas.microsoft.com/BizTalk/2003/system-properties";
-
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ActualRetryCount), NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ActualRetryCount), PropertySchemaNamespaces.System);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(ReceiveLocationName), ActualRetryCount.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(ReceiveLocationName), PropertySchemaNamespaces.System, "string", "System.String")]
 	[PropertyGuid(@"07b9d12b-4f3c-4ea2-b3ae-b7505351a59b")]
 	public sealed class ReceiveLocationName : MessageContextPropertyBase
 	{
@@ -56,11 +55,11 @@ namespace BTS
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ReceiveLocationName), ActualRetryCount.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ReceiveLocationName), PropertySchemaNamespaces.System);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(RouteMessageOnFailure), ActualRetryCount.NAMESPACE, "boolean", "System.Boolean")]
+	[PropertyType(nameof(RouteMessageOnFailure), PropertySchemaNamespaces.System, "boolean", "System.Boolean")]
 	[PropertyGuid(@"ae8c8465-2cd7-444b-b949-b1f639777a8e")]
 	public sealed class RouteMessageOnFailure : MessageContextPropertyBase
 	{
@@ -73,11 +72,11 @@ namespace BTS
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(RouteMessageOnFailure), ActualRetryCount.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(RouteMessageOnFailure), PropertySchemaNamespaces.System);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(WasSolicitResponse), ActualRetryCount.NAMESPACE, "boolean", "System.Boolean")]
+	[PropertyType(nameof(WasSolicitResponse), PropertySchemaNamespaces.System, "boolean", "System.Boolean")]
 	[PropertyGuid(@"1b1e28aa-861a-4705-866b-6595ef537e6f")]
 	public sealed class WasSolicitResponse : MessageContextPropertyBase
 	{
@@ -90,6 +89,6 @@ namespace BTS
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(WasSolicitResponse), ActualRetryCount.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(WasSolicitResponse), PropertySchemaNamespaces.System);
 	}
 }

@@ -18,13 +18,14 @@
 
 using System;
 using System.Xml;
+using Be.Stateless.BizTalk.Schemas;
 using Microsoft.XLANGs.BaseTypes;
 
 // ReSharper disable once CheckNamespace
 namespace WCF
 {
 	[Serializable]
-	[PropertyType(nameof(FolderPath), NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(FolderPath), PropertySchemaNamespaces.Wcf, "string", "System.String")]
 	[PropertyGuid(@"424bda96-fd66-456e-8688-9c18f7f46464")]
 	public sealed class FolderPath : MessageContextPropertyBase
 	{
@@ -36,14 +37,12 @@ namespace WCF
 
 		#endregion
 
-		internal const string NAMESPACE = "http://schemas.microsoft.com/BizTalk/2006/01/Adapters/WCF-properties";
-
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(FolderPath), NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(FolderPath), PropertySchemaNamespaces.Wcf);
 	}
 
 	[Serializable]
-	[PropertyType(nameof(TargetFileName), FolderPath.NAMESPACE, "string", "System.String")]
+	[PropertyType(nameof(TargetFileName), PropertySchemaNamespaces.Wcf, "string", "System.String")]
 	[PropertyGuid(@"e9cd6173-8f58-45dd-85ab-d49ed07bea87")]
 	public sealed class TargetFileName : MessageContextPropertyBase
 	{
@@ -56,6 +55,6 @@ namespace WCF
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(TargetFileName), FolderPath.NAMESPACE);
+		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(TargetFileName), PropertySchemaNamespaces.Wcf);
 	}
 }
