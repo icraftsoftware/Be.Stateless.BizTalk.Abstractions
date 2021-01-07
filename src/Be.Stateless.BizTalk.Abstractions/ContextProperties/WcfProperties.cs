@@ -23,7 +23,8 @@ namespace Be.Stateless.BizTalk.ContextProperties
 {
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
-	public static class WcfProperties
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class WcfProperties
 	{
 		public static readonly MessageContextProperty<Action, string> Action
 			= new MessageContextProperty<Action, string>();

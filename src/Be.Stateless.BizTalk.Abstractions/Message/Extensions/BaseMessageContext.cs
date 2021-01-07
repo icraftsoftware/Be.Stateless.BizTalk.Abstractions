@@ -69,6 +69,7 @@ namespace Be.Stateless.BizTalk.Message.Extensions
 			return context.GetProperty(property).HasValue && context.IsPromoted(property.Name, property.Namespace);
 		}
 
+		[SuppressMessage("ReSharper", "UnusedMethodReturnValue.Global")]
 		public static void Promote<T>(this IBaseMessageContext context, MessageContextProperty<T, string> property, string value)
 			where T : MessageContextPropertyBase, new()
 		{
@@ -113,6 +114,7 @@ namespace Be.Stateless.BizTalk.Message.Extensions
 
 		#region message's context property writing
 
+		[SuppressMessage("ReSharper", "UnusedMethodReturnValue.Global")]
 		public static void SetProperty<T>(this IBaseMessageContext context, MessageContextProperty<T, string> property, string value)
 			where T : MessageContextPropertyBase, new()
 		{

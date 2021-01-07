@@ -17,23 +17,15 @@
 #endregion
 
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.BizTalk.Message.Interop;
 
-namespace Be.Stateless.BizTalk.Schemas
+namespace Be.Stateless.BizTalk.Namespaces
 {
-	[SuppressMessage("ReSharper", "InconsistentNaming")]
-	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
+	[SuppressMessage("ReSharper", "InconsistentNaming", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
-	public static class ExtensionObjectNamespaces
+	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class XmlSchemaNamespaces
 	{
-		/// <summary>
-		/// The namespace that any XSLT must declare to <b>automatically</b> benefit from an extension object supporting <see
-		/// cref="IBaseMessageContext"/> read, write, and promote operations.
-		/// </summary>
-		/// <remarks>
-		/// If an XSLT choose not to declare this namespace then it is up to itself to instantiate this class and add it as an
-		/// extension object.
-		/// </remarks>
-		public const string MessageContext = "urn:extensions.stateless.be:biztalk:message:context:2012:12";
+		public const string BizTalkAggregate = "http://schemas.microsoft.com/BizTalk/2003/aggschema";
 	}
 }

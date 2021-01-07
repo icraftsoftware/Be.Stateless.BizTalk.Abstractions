@@ -24,8 +24,10 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
-	public static class EdiProperties
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class EdiProperties
 	{
+		[SuppressMessage("Naming", "CA1707:Identifiers should not contain underscores")]
 		public static readonly MessageContextProperty<BGM1_1, string> BGM1_1
 			= new MessageContextProperty<BGM1_1, string>();
 
@@ -47,9 +49,11 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		public static readonly MessageContextProperty<MKS1, string> MKS1
 			= new MessageContextProperty<MKS1, string>();
 
+		[SuppressMessage("Naming", "CA1707:Identifiers should not contain underscores")]
 		public static readonly MessageContextProperty<Unb21, string> UNB2_1
 			= new MessageContextProperty<Unb21, string>();
 
+		[SuppressMessage("Naming", "CA1707:Identifiers should not contain underscores")]
 		public static readonly MessageContextProperty<Unb31, string> UNB3_1
 			= new MessageContextProperty<Unb31, string>();
 	}

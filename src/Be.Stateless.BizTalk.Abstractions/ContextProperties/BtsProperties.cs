@@ -22,7 +22,8 @@ using BTS;
 namespace Be.Stateless.BizTalk.ContextProperties
 {
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
-	public static class BtsProperties
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class BtsProperties
 	{
 		public static readonly MessageContextProperty<AckRequired, bool> AckRequired
 			= new MessageContextProperty<AckRequired, bool>();

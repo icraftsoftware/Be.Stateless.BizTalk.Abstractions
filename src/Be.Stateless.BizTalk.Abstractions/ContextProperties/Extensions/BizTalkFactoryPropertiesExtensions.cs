@@ -31,54 +31,6 @@ namespace Be.Stateless.BizTalk.ContextProperties.Extensions
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
 	public static class BizTalkFactoryPropertiesExtensions
 	{
-		public static IBaseMessage SetCorrelationId(this IBaseMessage message, string correlationId)
-		{
-			message.SetProperty(BizTalkFactoryProperties.CorrelationId, correlationId);
-			return message;
-		}
-
-		public static IBaseMessageContext SetCorrelationId(this IBaseMessageContext context, string correlationId)
-		{
-			context.SetProperty(BizTalkFactoryProperties.CorrelationId, correlationId);
-			return context;
-		}
-
-		public static IBaseMessage PromoteCorrelationId(this IBaseMessage message, string correlationId)
-		{
-			message.Promote(BizTalkFactoryProperties.CorrelationId, correlationId);
-			return message;
-		}
-
-		public static IBaseMessageContext PromoteCorrelationId(this IBaseMessageContext context, string correlationId)
-		{
-			context.Promote(BizTalkFactoryProperties.CorrelationId, correlationId);
-			return context;
-		}
-
-		public static IBaseMessage SetEnvironmentTag(this IBaseMessage message, string environmentTag)
-		{
-			message.SetProperty(BizTalkFactoryProperties.EnvironmentTag, environmentTag);
-			return message;
-		}
-
-		public static IBaseMessageContext SetEnvironmentTag(this IBaseMessageContext context, string environmentTag)
-		{
-			context.SetProperty(BizTalkFactoryProperties.EnvironmentTag, environmentTag);
-			return context;
-		}
-
-		public static IBaseMessage PromoteEnvironmentTag(this IBaseMessage message, string environmentTag)
-		{
-			message.Promote(BizTalkFactoryProperties.EnvironmentTag, environmentTag);
-			return message;
-		}
-
-		public static IBaseMessageContext PromoteEnvironmentTag(this IBaseMessageContext context, string environmentTag)
-		{
-			context.Promote(BizTalkFactoryProperties.EnvironmentTag, environmentTag);
-			return context;
-		}
-
 		public static IBaseMessage SetMap<T>(this IBaseMessage message) where T : TransformBase
 		{
 			message.SetProperty(BizTalkFactoryProperties.MapTypeName, typeof(T).AssemblyQualifiedName);
@@ -100,54 +52,6 @@ namespace Be.Stateless.BizTalk.ContextProperties.Extensions
 		public static IBaseMessageContext SetOutboundTransportLocation(this IBaseMessageContext context, string outboundTransportLocation)
 		{
 			context.SetProperty(BizTalkFactoryProperties.OutboundTransportLocation, outboundTransportLocation);
-			return context;
-		}
-
-		public static IBaseMessage SetReceiverName(this IBaseMessage message, string receiverName)
-		{
-			message.SetProperty(BizTalkFactoryProperties.ReceiverName, receiverName);
-			return message;
-		}
-
-		public static IBaseMessageContext SetReceiverName(this IBaseMessageContext context, string receiverName)
-		{
-			context.SetProperty(BizTalkFactoryProperties.ReceiverName, receiverName);
-			return context;
-		}
-
-		public static IBaseMessage PromoteReceiverName(this IBaseMessage message, string receiverName)
-		{
-			message.Promote(BizTalkFactoryProperties.ReceiverName, receiverName);
-			return message;
-		}
-
-		public static IBaseMessageContext PromoteReceiverName(this IBaseMessageContext context, string receiverName)
-		{
-			context.Promote(BizTalkFactoryProperties.ReceiverName, receiverName);
-			return context;
-		}
-
-		public static IBaseMessage SetSenderName(this IBaseMessage message, string senderName)
-		{
-			message.SetProperty(BizTalkFactoryProperties.SenderName, senderName);
-			return message;
-		}
-
-		public static IBaseMessageContext SetSenderName(this IBaseMessageContext context, string senderName)
-		{
-			context.SetProperty(BizTalkFactoryProperties.SenderName, senderName);
-			return context;
-		}
-
-		public static IBaseMessage PromoteSenderName(this IBaseMessage message, string senderName)
-		{
-			message.Promote(BizTalkFactoryProperties.SenderName, senderName);
-			return message;
-		}
-
-		public static IBaseMessageContext PromoteSenderName(this IBaseMessageContext context, string senderName)
-		{
-			context.Promote(BizTalkFactoryProperties.SenderName, senderName);
 			return context;
 		}
 	}

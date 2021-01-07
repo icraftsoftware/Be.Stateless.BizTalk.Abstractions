@@ -19,7 +19,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Xml;
-using Be.Stateless.BizTalk.Schemas;
+using Be.Stateless.BizTalk.Namespaces;
 using Microsoft.XLANGs.BaseTypes;
 
 // ReSharper disable once CheckNamespace
@@ -28,6 +28,7 @@ namespace EDI
 	[Serializable]
 	[PropertyType(nameof(BGM1_1), PropertySchemaNamespaces.Edi, "string", "")]
 	[PropertyGuid(@"2a0ba9ec-e3ed-44b8-a590-344e904f89ac")]
+	[SuppressMessage("Naming", "CA1707:Identifiers should not contain underscores")]
 	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	public sealed class BGM1_1 : MessageContextPropertyBase
 	{

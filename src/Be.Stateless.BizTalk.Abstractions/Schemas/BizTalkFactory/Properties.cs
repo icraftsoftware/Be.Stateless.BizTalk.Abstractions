@@ -18,6 +18,7 @@
 
 using System;
 using System.Xml;
+using Be.Stateless.BizTalk.Namespaces;
 using Microsoft.XLANGs.BaseTypes;
 
 namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
@@ -37,40 +38,6 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 
 		[NonSerialized]
 		private static readonly XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ContextBuilderTypeName), PropertySchemaNamespaces.BizTalkFactory);
-	}
-
-	[Serializable]
-	[PropertyType(nameof(CorrelationId), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
-	[PropertyGuid(@"5206a0a0-40e5-44f2-b6b0-069d0293e37a")]
-	public sealed class CorrelationId : MessageContextPropertyBase
-	{
-		#region Base Class Member Overrides
-
-		public override XmlQualifiedName Name => _qualifiedName;
-
-		public override Type Type => typeof(string);
-
-		#endregion
-
-		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(CorrelationId), PropertySchemaNamespaces.BizTalkFactory);
-	}
-
-	[Serializable]
-	[PropertyType(nameof(EnvironmentTag), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
-	[PropertyGuid(@"dce26d06-9a64-49ac-8651-03286a5cba2e")]
-	public sealed class EnvironmentTag : MessageContextPropertyBase
-	{
-		#region Base Class Member Overrides
-
-		public override XmlQualifiedName Name => _qualifiedName;
-
-		public override Type Type => typeof(string);
-
-		#endregion
-
-		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(EnvironmentTag), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
@@ -139,40 +106,6 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 
 		[NonSerialized]
 		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(OutboundTransportLocation), PropertySchemaNamespaces.BizTalkFactory);
-	}
-
-	[Serializable]
-	[PropertyType(nameof(ReceiverName), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
-	[PropertyGuid(@"268786e1-7638-4e02-ad9c-c69b0deca23f")]
-	public sealed class ReceiverName : MessageContextPropertyBase
-	{
-		#region Base Class Member Overrides
-
-		public override XmlQualifiedName Name => _qualifiedName;
-
-		public override Type Type => typeof(string);
-
-		#endregion
-
-		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ReceiverName), PropertySchemaNamespaces.BizTalkFactory);
-	}
-
-	[Serializable]
-	[PropertyType(nameof(SenderName), PropertySchemaNamespaces.BizTalkFactory, "string", "System.String")]
-	[PropertyGuid(@"1b669871-b481-4e4f-9a6a-d182c24c462e")]
-	public sealed class SenderName : MessageContextPropertyBase
-	{
-		#region Base Class Member Overrides
-
-		public override XmlQualifiedName Name => _qualifiedName;
-
-		public override Type Type => typeof(string);
-
-		#endregion
-
-		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(SenderName), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]

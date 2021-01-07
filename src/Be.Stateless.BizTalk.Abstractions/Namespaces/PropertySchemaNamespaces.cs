@@ -18,10 +18,13 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-namespace Be.Stateless.BizTalk.Schemas
+namespace Be.Stateless.BizTalk.Namespaces
 {
-	[SuppressMessage("ReSharper", "InconsistentNaming")]
-	public static class PropertySchemaNamespaces
+	[SuppressMessage("ReSharper", "InconsistentNaming", Justification = "Public API.")]
+	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
+	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class PropertySchemaNamespaces
 	{
 		public const string BizTalkFactory = "urn:schemas.stateless.be:biztalk:properties:system:2012:04";
 		public const string Edi = "http://schemas.microsoft.com/Edi/PropertySchema";

@@ -24,7 +24,8 @@ namespace Be.Stateless.BizTalk.ContextProperties
 {
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
-	public static class SBMessagingProperties
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class SBMessagingProperties
 	{
 		public static readonly MessageContextProperty<ContentType, string> ContentType
 			= new MessageContextProperty<ContentType, string>();

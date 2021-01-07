@@ -37,7 +37,8 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	/// </remarks>
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
-	public static class SftpProperties
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class SftpProperties
 	{
 		/// <summary>
 		/// Remote SFTP folder path. Oddly enough, <see cref="FolderPath"/> is concealed in the <see cref="WCF"/> property schema

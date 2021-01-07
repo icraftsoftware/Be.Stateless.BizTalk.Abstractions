@@ -69,6 +69,7 @@ namespace Be.Stateless.BizTalk.Runtime.Caching
 		/// When the cache does not already contain the <typeparamref name="TItem"/> instance, it is inserted into the cache with
 		/// <see cref="CacheItemPolicy"/> provided by the derived class.
 		/// </remarks>
+		[SuppressMessage("ReSharper", "InvertIf")]
 		[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 		public TItem this[TKey key]
 		{

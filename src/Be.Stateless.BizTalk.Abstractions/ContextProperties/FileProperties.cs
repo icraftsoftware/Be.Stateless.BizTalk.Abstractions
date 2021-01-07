@@ -23,7 +23,8 @@ using FILE;
 namespace Be.Stateless.BizTalk.ContextProperties
 {
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
-	public static class FileProperties
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class FileProperties
 	{
 		public static readonly MessageContextProperty<FileCreationTime, DateTime> FileCreationTime
 			= new MessageContextProperty<FileCreationTime, DateTime>();

@@ -56,12 +56,13 @@ namespace Be.Stateless.BizTalk.Message.Extensions
 			message.Context.Write(property.Name, property.Namespace, null);
 		}
 
-		public static void DeleteProperty<T>(this XLANGMessage message, MessageContextProperty<T, object> property)
+		public static XLANGMessage DeleteProperty<T>(this XLANGMessage message, MessageContextProperty<T, object> property)
 			where T : MessageContextPropertyBase, new()
 		{
 			if (message == null) throw new ArgumentNullException(nameof(message));
 			if (property is null) throw new ArgumentNullException(nameof(property));
 			message.SetPropertyValue(property.Type, null);
+			return message;
 		}
 
 		#endregion
@@ -85,6 +86,7 @@ namespace Be.Stateless.BizTalk.Message.Extensions
 			return message.GetProperty(property).HasValue && message.Context.IsPromoted(property.Name, property.Namespace);
 		}
 
+		[SuppressMessage("ReSharper", "UnusedMethodReturnValue.Global")]
 		public static void Promote<T>(this IBaseMessage message, MessageContextProperty<T, string> property, string value)
 			where T : MessageContextPropertyBase, new()
 		{
@@ -149,6 +151,7 @@ namespace Be.Stateless.BizTalk.Message.Extensions
 
 		#region message's context property writing
 
+		[SuppressMessage("ReSharper", "UnusedMethodReturnValue.Global")]
 		public static void SetProperty<T>(this IBaseMessage message, MessageContextProperty<T, string> property, string value)
 			where T : MessageContextPropertyBase, new()
 		{
@@ -166,21 +169,23 @@ namespace Be.Stateless.BizTalk.Message.Extensions
 			message.Context.Write(property.Name, property.Namespace, value);
 		}
 
-		public static void SetProperty<T>(this XLANGMessage message, MessageContextProperty<T, string> property, string value)
+		public static XLANGMessage SetProperty<T>(this XLANGMessage message, MessageContextProperty<T, string> property, string value)
 			where T : MessageContextPropertyBase, new()
 		{
 			if (message == null) throw new ArgumentNullException(nameof(message));
 			if (property is null) throw new ArgumentNullException(nameof(property));
 			if (value != null) message.SetPropertyValue(property.Type, value);
+			return message;
 		}
 
-		public static void SetProperty<T, TV>(this XLANGMessage message, MessageContextProperty<T, TV> property, TV value)
+		public static XLANGMessage SetProperty<T, TV>(this XLANGMessage message, MessageContextProperty<T, TV> property, TV value)
 			where T : MessageContextPropertyBase, new()
 			where TV : struct
 		{
 			if (message == null) throw new ArgumentNullException(nameof(message));
 			if (property is null) throw new ArgumentNullException(nameof(property));
 			message.SetPropertyValue(property.Type, value);
+			return message;
 		}
 
 		#endregion

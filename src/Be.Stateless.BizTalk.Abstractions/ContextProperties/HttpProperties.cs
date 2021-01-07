@@ -23,7 +23,8 @@ namespace Be.Stateless.BizTalk.ContextProperties
 {
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
-	public static class HttpProperties
+	// Abstract to support syntax extension by inheriting and declaring new static members.
+	public abstract class HttpProperties
 	{
 		public static readonly MessageContextProperty<ContentType, string> ContentType
 			= new MessageContextProperty<ContentType, string>();

@@ -17,22 +17,24 @@
 #endregion
 
 using System.Diagnostics.CodeAnalysis;
-using POP3;
+using Microsoft.BizTalk.Message.Interop;
 
-namespace Be.Stateless.BizTalk.ContextProperties
+namespace Be.Stateless.BizTalk.Namespaces
 {
+	[SuppressMessage("ReSharper", "InconsistentNaming", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
 	// Abstract to support syntax extension by inheriting and declaring new static members.
-	public abstract class Pop3Properties
+	public abstract class ExtensionObjectNamespaces
 	{
-		public static readonly MessageContextProperty<Date, string> Date
-			= new MessageContextProperty<Date, string>();
-
-		public static readonly MessageContextProperty<From, string> From
-			= new MessageContextProperty<From, string>();
-
-		public static readonly MessageContextProperty<Subject, string> Subject
-			= new MessageContextProperty<Subject, string>();
+		/// <summary>
+		/// The namespace that any XSLT must declare to <b>automatically</b> benefit from an extension object supporting <see
+		/// cref="IBaseMessageContext"/> read, write, and promote operations.
+		/// </summary>
+		/// <remarks>
+		/// If an XSLT choose not to declare this namespace then it is up to itself to instantiate this class and add it as an
+		/// extension object.
+		/// </remarks>
+		public const string MessageContext = "urn:extensions.stateless.be:biztalk:message:context:2012:12";
 	}
 }

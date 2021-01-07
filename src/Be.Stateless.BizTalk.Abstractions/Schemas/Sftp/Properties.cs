@@ -18,7 +18,7 @@
 
 using System;
 using System.Xml;
-using Be.Stateless.BizTalk.Schemas;
+using Be.Stateless.BizTalk.Namespaces;
 using Microsoft.XLANGs.BaseTypes;
 
 // ReSharper disable once CheckNamespace
