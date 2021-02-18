@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,11 +22,21 @@ using System.Runtime.Caching;
 using System.Threading;
 using FluentAssertions;
 using Xunit;
+using static FluentAssertions.FluentActions;
 
 namespace Be.Stateless.BizTalk.Runtime.Caching
 {
 	public class MemoryCacheAssumptionFixture
 	{
+		#region Setup/Teardown
+
+		public MemoryCacheAssumptionFixture()
+		{
+			_memoryCache = new MemoryCache("test");
+		}
+
+		#endregion
+
 		[Fact]
 		public void AccessingItemRenewsItWhenUsingSlidingExpiration()
 		{
@@ -58,8 +68,7 @@ namespace Be.Stateless.BizTalk.Runtime.Caching
 		[SuppressMessage("ReSharper", "ObjectCreationAsStatement")]
 		public void ConstructorThrowsWhenNameIsNull()
 		{
-			Action act = () => new MemoryCache(null);
-			act.Should().Throw<ArgumentNullException>();
+			Invoking(() => new MemoryCache(null)).Should().Throw<ArgumentNullException>();
 		}
 
 		[Fact]
@@ -99,8 +108,7 @@ namespace Be.Stateless.BizTalk.Runtime.Caching
 		[SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
 		public void ContainsThrowsWhenKeyIsNull()
 		{
-			Action act = () => _memoryCache.Contains(null);
-			act.Should().Throw<ArgumentNullException>();
+			Invoking(() => _memoryCache.Contains(null)).Should().Throw<ArgumentNullException>();
 		}
 
 		[Fact]
@@ -171,11 +179,6 @@ namespace Be.Stateless.BizTalk.Runtime.Caching
 			_memoryCache.Add(new CacheItem("test", value), new CacheItemPolicy());
 
 			_memoryCache.Remove("test").Should().BeSameAs(value);
-		}
-
-		public MemoryCacheAssumptionFixture()
-		{
-			_memoryCache = new MemoryCache("test");
 		}
 
 		private readonly MemoryCache _memoryCache;
