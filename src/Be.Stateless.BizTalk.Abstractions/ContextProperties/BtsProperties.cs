@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,87 +25,36 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	// Abstract to support syntax extension by inheriting and declaring new static members.
 	public abstract class BtsProperties
 	{
-		public static readonly MessageContextProperty<AckRequired, bool> AckRequired
-			= new MessageContextProperty<AckRequired, bool>();
-
-		public static readonly MessageContextProperty<ActualRetryCount, int> ActualRetryCount
-			= new MessageContextProperty<ActualRetryCount, int>();
-
-		public static readonly MessageContextProperty<InboundTransportLocation, string> InboundTransportLocation
-			= new MessageContextProperty<InboundTransportLocation, string>();
-
-		public static readonly MessageContextProperty<InboundTransportType, string> InboundTransportType
-			= new MessageContextProperty<InboundTransportType, string>();
-
-		public static readonly MessageContextProperty<InterchangeID, string> InterchangeID
-			= new MessageContextProperty<InterchangeID, string>();
-
-		public static readonly MessageContextProperty<IsDynamicSend, bool> IsDynamicSend
-			= new MessageContextProperty<IsDynamicSend, bool>();
-
-		public static readonly MessageContextProperty<IsRequestResponse, bool> IsRequestResponse
-			= new MessageContextProperty<IsRequestResponse, bool>();
-
-		public static readonly MessageContextProperty<IsSolicitResponse, bool> IsSolicitResponse
-			= new MessageContextProperty<IsSolicitResponse, bool>();
-
-		public static readonly MessageContextProperty<MessageDestination, string> MessageDestination
-			= new MessageContextProperty<MessageDestination, string>();
-
-		public static readonly MessageContextProperty<MessageID, string> MessageID
-			= new MessageContextProperty<MessageID, string>();
-
-		public static readonly MessageContextProperty<MessageType, string> MessageType
-			= new MessageContextProperty<MessageType, string>();
-
-		public static readonly MessageContextProperty<Operation, string> Operation
-			= new MessageContextProperty<Operation, string>();
+		public static readonly MessageContextProperty<AckRequired, bool> AckRequired = new();
+		public static readonly MessageContextProperty<ActualRetryCount, int> ActualRetryCount = new();
+		public static readonly MessageContextProperty<InboundTransportLocation, string> InboundTransportLocation = new();
+		public static readonly MessageContextProperty<InboundTransportType, string> InboundTransportType = new();
+		public static readonly MessageContextProperty<InterchangeID, string> InterchangeID = new();
+		public static readonly MessageContextProperty<IsDynamicSend, bool> IsDynamicSend = new();
+		public static readonly MessageContextProperty<IsRequestResponse, bool> IsRequestResponse = new();
+		public static readonly MessageContextProperty<IsSolicitResponse, bool> IsSolicitResponse = new();
+		public static readonly MessageContextProperty<MessageDestination, string> MessageDestination = new();
+		public static readonly MessageContextProperty<MessageID, string> MessageID = new();
+		public static readonly MessageContextProperty<MessageType, string> MessageType = new();
+		public static readonly MessageContextProperty<Operation, string> Operation = new();
 
 		[SuppressMessage("ReSharper", "IdentifierTypo")]
 		[SuppressMessage("ReSharper", "InconsistentNaming")]
-		public static readonly MessageContextProperty<OutboundTransportCLSID, string> OutboundTransportCLSID
-			= new MessageContextProperty<OutboundTransportCLSID, string>();
+		public static readonly MessageContextProperty<OutboundTransportCLSID, string> OutboundTransportCLSID = new();
 
-		public static readonly MessageContextProperty<OutboundTransportLocation, string> OutboundTransportLocation
-			= new MessageContextProperty<OutboundTransportLocation, string>();
-
-		public static readonly MessageContextProperty<OutboundTransportType, string> OutboundTransportType
-			= new MessageContextProperty<OutboundTransportType, string>();
-
-		public static readonly MessageContextProperty<ReceiveLocationName, string> ReceiveLocationName
-			= new MessageContextProperty<ReceiveLocationName, string>();
-
-		public static readonly MessageContextProperty<ReceivePipelineConfig, string> ReceivePipelineConfig
-			= new MessageContextProperty<ReceivePipelineConfig, string>();
-
-		public static readonly MessageContextProperty<ReceivePortName, string> ReceivePortName
-			= new MessageContextProperty<ReceivePortName, string>();
-
-		public static readonly MessageContextProperty<RetryCount, int> RetryCount
-			= new MessageContextProperty<RetryCount, int>();
-
-		public static readonly MessageContextProperty<RetryInterval, int> RetryInterval
-			= new MessageContextProperty<RetryInterval, int>();
-
-		public static readonly MessageContextProperty<RouteMessageOnFailure, bool> RouteMessageOnFailure
-			= new MessageContextProperty<RouteMessageOnFailure, bool>();
-
-		public static readonly MessageContextProperty<SchemaStrongName, string> SchemaStrongName
-			= new MessageContextProperty<SchemaStrongName, string>();
-
-		public static readonly MessageContextProperty<SPName, string> SendPortName
-			= new MessageContextProperty<SPName, string>();
-
-		public static readonly MessageContextProperty<SuppressRoutingFailureDiagnosticInfo, bool> SuppressRoutingFailureDiagnosticInfo
-			= new MessageContextProperty<SuppressRoutingFailureDiagnosticInfo, bool>();
-
-		public static readonly MessageContextProperty<SuspendMessageOnRoutingFailure, bool> SuspendMessageOnRoutingFailure
-			= new MessageContextProperty<SuspendMessageOnRoutingFailure, bool>();
-
-		public static readonly MessageContextProperty<TransmitWorkID, string> TransmitWorkId
-			= new MessageContextProperty<TransmitWorkID, string>();
-
-		public static readonly MessageContextProperty<WasSolicitResponse, bool> WasSolicitResponse
-			= new MessageContextProperty<WasSolicitResponse, bool>();
+		public static readonly MessageContextProperty<OutboundTransportLocation, string> OutboundTransportLocation = new();
+		public static readonly MessageContextProperty<OutboundTransportType, string> OutboundTransportType = new();
+		public static readonly MessageContextProperty<ReceiveLocationName, string> ReceiveLocationName = new();
+		public static readonly MessageContextProperty<ReceivePipelineConfig, string> ReceivePipelineConfig = new();
+		public static readonly MessageContextProperty<ReceivePortName, string> ReceivePortName = new();
+		public static readonly MessageContextProperty<RetryCount, int> RetryCount = new();
+		public static readonly MessageContextProperty<RetryInterval, int> RetryInterval = new();
+		public static readonly MessageContextProperty<RouteMessageOnFailure, bool> RouteMessageOnFailure = new();
+		public static readonly MessageContextProperty<SchemaStrongName, string> SchemaStrongName = new();
+		public static readonly MessageContextProperty<SPName, string> SendPortName = new();
+		public static readonly MessageContextProperty<SuppressRoutingFailureDiagnosticInfo, bool> SuppressRoutingFailureDiagnosticInfo = new();
+		public static readonly MessageContextProperty<SuspendMessageOnRoutingFailure, bool> SuspendMessageOnRoutingFailure = new();
+		public static readonly MessageContextProperty<TransmitWorkID, string> TransmitWorkId = new();
+		public static readonly MessageContextProperty<WasSolicitResponse, bool> WasSolicitResponse = new();
 	}
 }

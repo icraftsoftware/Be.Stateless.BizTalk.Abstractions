@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,7 +37,24 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static readonly XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ContextBuilderTypeName), PropertySchemaNamespaces.BizTalkFactory);
+		private static readonly XmlQualifiedName _qualifiedName = new(nameof(ContextBuilderTypeName), PropertySchemaNamespaces.BizTalkFactory);
+	}
+
+	[Serializable]
+	[PropertyType(nameof(DisableTransportRetries), PropertySchemaNamespaces.System, "boolean", "System.Boolean")]
+	[PropertyGuid(@"f6531afc-a129-4314-a811-3325b112ee5b")]
+	public sealed class DisableTransportRetries : MessageContextPropertyBase
+	{
+		#region Base Class Member Overrides
+
+		public override XmlQualifiedName Name => _qualifiedName;
+
+		public override Type Type => typeof(bool);
+
+		#endregion
+
+		[NonSerialized]
+		private static XmlQualifiedName _qualifiedName = new(nameof(DisableTransportRetries), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
@@ -54,7 +71,7 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MapTypeName), PropertySchemaNamespaces.BizTalkFactory);
+		private static XmlQualifiedName _qualifiedName = new(nameof(MapTypeName), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
@@ -71,7 +88,7 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MessageBodyStreamFactoryTypeName), PropertySchemaNamespaces.BizTalkFactory);
+		private static XmlQualifiedName _qualifiedName = new(nameof(MessageBodyStreamFactoryTypeName), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
@@ -88,7 +105,7 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MessageType), PropertySchemaNamespaces.BizTalkFactory);
+		private static XmlQualifiedName _qualifiedName = new(nameof(MessageType), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
@@ -105,7 +122,7 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(OutboundTransportLocation), PropertySchemaNamespaces.BizTalkFactory);
+		private static XmlQualifiedName _qualifiedName = new(nameof(OutboundTransportLocation), PropertySchemaNamespaces.BizTalkFactory);
 	}
 
 	[Serializable]
@@ -122,6 +139,6 @@ namespace Be.Stateless.BizTalk.Schemas.BizTalkFactory
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(XmlTranslations), PropertySchemaNamespaces.BizTalkFactory);
+		private static XmlQualifiedName _qualifiedName = new(nameof(XmlTranslations), PropertySchemaNamespaces.BizTalkFactory);
 	}
 }

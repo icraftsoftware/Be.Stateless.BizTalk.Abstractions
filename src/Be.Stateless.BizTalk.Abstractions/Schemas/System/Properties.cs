@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ namespace BTS
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ActualRetryCount), PropertySchemaNamespaces.System);
+		private static XmlQualifiedName _qualifiedName = new(nameof(ActualRetryCount), PropertySchemaNamespaces.System);
 	}
 
 	[Serializable]
@@ -55,7 +55,7 @@ namespace BTS
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(ReceiveLocationName), PropertySchemaNamespaces.System);
+		private static XmlQualifiedName _qualifiedName = new(nameof(ReceiveLocationName), PropertySchemaNamespaces.System);
 	}
 
 	[Serializable]
@@ -72,7 +72,7 @@ namespace BTS
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(RouteMessageOnFailure), PropertySchemaNamespaces.System);
+		private static XmlQualifiedName _qualifiedName = new(nameof(RouteMessageOnFailure), PropertySchemaNamespaces.System);
 	}
 
 	[Serializable]
@@ -89,6 +89,6 @@ namespace BTS
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(WasSolicitResponse), PropertySchemaNamespaces.System);
+		private static XmlQualifiedName _qualifiedName = new(nameof(WasSolicitResponse), PropertySchemaNamespaces.System);
 	}
 }

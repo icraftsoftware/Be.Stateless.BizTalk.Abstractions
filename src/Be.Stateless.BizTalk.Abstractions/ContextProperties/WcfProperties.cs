@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,52 +26,21 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	// Abstract to support syntax extension by inheriting and declaring new static members.
 	public abstract class WcfProperties
 	{
-		public static readonly MessageContextProperty<Action, string> Action
-			= new MessageContextProperty<Action, string>();
-
-		public static readonly MessageContextProperty<Headers, string> Headers
-			= new MessageContextProperty<Headers, string>();
-
-		public static readonly MessageContextProperty<HttpHeaders, string> HttpHeaders
-			= new MessageContextProperty<HttpHeaders, string>();
-
-		public static readonly MessageContextProperty<HttpMethodAndUrl, string> HttpMethodAndUrl
-			= new MessageContextProperty<HttpMethodAndUrl, string>();
-
-		public static readonly MessageContextProperty<Identity, string> Identity
-			= new MessageContextProperty<Identity, string>();
-
-		public static readonly MessageContextProperty<InboundBodyLocation, string> InboundBodyLocation
-			= new MessageContextProperty<InboundBodyLocation, string>();
-
-		public static readonly MessageContextProperty<InboundBodyPathExpression, string> InboundBodyPathExpression
-			= new MessageContextProperty<InboundBodyPathExpression, string>();
-
-		public static readonly MessageContextProperty<MaxConcurrentCalls, int> MaxConcurrentCalls
-			= new MessageContextProperty<MaxConcurrentCalls, int>();
-
-		public static readonly MessageContextProperty<MaxConnections, int> MaxConnections
-			= new MessageContextProperty<MaxConnections, int>();
-
-		public static readonly MessageContextProperty<OutboundBodyLocation, string> OutboundBodyLocation
-			= new MessageContextProperty<OutboundBodyLocation, string>();
-
-		public static readonly MessageContextProperty<OutboundXmlTemplate, string> OutboundXmlTemplate
-			= new MessageContextProperty<OutboundXmlTemplate, string>();
-
-		public static readonly MessageContextProperty<SendTimeout, string> SendTimeout
-			= new MessageContextProperty<SendTimeout, string>();
-
-		public static readonly MessageContextProperty<SuppressMessageBodyForHttpVerbs, string> SuppressMessageBodyForHttpVerbs
-			= new MessageContextProperty<SuppressMessageBodyForHttpVerbs, string>();
-
-		public static readonly MessageContextProperty<TimeToLive, string> TimeToLive
-			= new MessageContextProperty<TimeToLive, string>();
-
-		public static readonly MessageContextProperty<To, string> To
-			= new MessageContextProperty<To, string>();
-
-		public static readonly MessageContextProperty<VariablePropertyMapping, string> VariablePropertyMapping
-			= new MessageContextProperty<VariablePropertyMapping, string>();
+		public static readonly MessageContextProperty<Action, string> Action = new();
+		public static readonly MessageContextProperty<Headers, string> Headers = new();
+		public static readonly MessageContextProperty<HttpHeaders, string> HttpHeaders = new();
+		public static readonly MessageContextProperty<HttpMethodAndUrl, string> HttpMethodAndUrl = new();
+		public static readonly MessageContextProperty<Identity, string> Identity = new();
+		public static readonly MessageContextProperty<InboundBodyLocation, string> InboundBodyLocation = new();
+		public static readonly MessageContextProperty<InboundBodyPathExpression, string> InboundBodyPathExpression = new();
+		public static readonly MessageContextProperty<MaxConcurrentCalls, int> MaxConcurrentCalls = new();
+		public static readonly MessageContextProperty<MaxConnections, int> MaxConnections = new();
+		public static readonly MessageContextProperty<OutboundBodyLocation, string> OutboundBodyLocation = new();
+		public static readonly MessageContextProperty<OutboundXmlTemplate, string> OutboundXmlTemplate = new();
+		public static readonly MessageContextProperty<SendTimeout, string> SendTimeout = new();
+		public static readonly MessageContextProperty<SuppressMessageBodyForHttpVerbs, string> SuppressMessageBodyForHttpVerbs = new();
+		public static readonly MessageContextProperty<TimeToLive, string> TimeToLive = new();
+		public static readonly MessageContextProperty<To, string> To = new();
+		public static readonly MessageContextProperty<VariablePropertyMapping, string> VariablePropertyMapping = new();
 	}
 }

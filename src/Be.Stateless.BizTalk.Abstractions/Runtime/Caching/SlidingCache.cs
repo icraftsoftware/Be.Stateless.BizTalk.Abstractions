@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -82,7 +82,7 @@ namespace Be.Stateless.BizTalk.Runtime.Caching
 		/// </remarks>
 		/// <seealso cref="SlidingCache{TKey,TItem}(Func{TKey,string},Func{TKey,TItem})"/>
 		/// <seealso cref="SlidingCache{TKey,TItem}(Func{TKey,string},Func{TKey,TItem},TimeSpan)"/>
-		protected override CacheItemPolicy CacheItemPolicy => new CacheItemPolicy { SlidingExpiration = _slidingExpiration };
+		protected override CacheItemPolicy CacheItemPolicy => new() { SlidingExpiration = _slidingExpiration };
 
 		#endregion
 

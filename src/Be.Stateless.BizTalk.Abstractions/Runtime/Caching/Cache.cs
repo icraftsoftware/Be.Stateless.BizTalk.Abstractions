@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,8 +35,6 @@ namespace Be.Stateless.BizTalk.Runtime.Caching
 	/// For each derived class, <see cref="Cache{TKey,TItem}"/> creates behind the scene a named memory cache instance, i.e. a
 	/// <see cref="System.Runtime.Caching.MemoryCache"/>, named after the most-derived class name.
 	/// </remarks>
-	[SuppressMessage("Design", "CA1001:Types that own disposable fields should be disposable")]
-	[SuppressMessage("Naming", "CA1724:Type names should not match namespaces")]
 	public abstract class Cache<TKey, TItem>
 	{
 		/// <summary>

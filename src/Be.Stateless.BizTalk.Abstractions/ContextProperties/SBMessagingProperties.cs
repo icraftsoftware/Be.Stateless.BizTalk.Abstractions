@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,58 +24,26 @@ namespace Be.Stateless.BizTalk.ContextProperties
 {
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
+	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	// Abstract to support syntax extension by inheriting and declaring new static members.
 	public abstract class SBMessagingProperties
 	{
-		public static readonly MessageContextProperty<ContentType, string> ContentType
-			= new MessageContextProperty<ContentType, string>();
-
-		public static readonly MessageContextProperty<CorrelationId, string> CorrelationId
-			= new MessageContextProperty<CorrelationId, string>();
-
-		public static readonly MessageContextProperty<CustomBrokeredMessagePropertyNamespace, string> CustomBrokeredMessagePropertyNamespace
-			= new MessageContextProperty<CustomBrokeredMessagePropertyNamespace, string>();
-
-		public static readonly MessageContextProperty<DeliveryCount, int> DeliveryCount
-			= new MessageContextProperty<DeliveryCount, int>();
-
-		public static readonly MessageContextProperty<EnqueuedTimeUtc, DateTime> EnqueuedTimeUtc
-			= new MessageContextProperty<EnqueuedTimeUtc, DateTime>();
-
-		public static readonly MessageContextProperty<ExpiresAtUtc, DateTime> ExpiresAtUtc
-			= new MessageContextProperty<ExpiresAtUtc, DateTime>();
-
-		public static readonly MessageContextProperty<Label, string> Label
-			= new MessageContextProperty<Label, string>();
-
-		public static readonly MessageContextProperty<LockedUntilUtc, DateTime> LockedUntilUtc
-			= new MessageContextProperty<LockedUntilUtc, DateTime>();
-
-		public static readonly MessageContextProperty<LockToken, string> LockToken
-			= new MessageContextProperty<LockToken, string>();
-
-		public static readonly MessageContextProperty<MessageId, string> MessageId
-			= new MessageContextProperty<MessageId, string>();
-
-		public static readonly MessageContextProperty<ReplyTo, string> ReplyTo
-			= new MessageContextProperty<ReplyTo, string>();
-
-		public static readonly MessageContextProperty<ReplyToSessionId, string> ReplyToSessionId
-			= new MessageContextProperty<ReplyToSessionId, string>();
-
-		public static readonly MessageContextProperty<ScheduledEnqueueTimeUtc, DateTime> ScheduledEnqueueTimeUtc
-			= new MessageContextProperty<ScheduledEnqueueTimeUtc, DateTime>();
-
-		public static readonly MessageContextProperty<SequenceNumber, string> SequenceNumber
-			= new MessageContextProperty<SequenceNumber, string>();
-
-		public static readonly MessageContextProperty<SessionId, string> SessionId
-			= new MessageContextProperty<SessionId, string>();
-
-		public static readonly MessageContextProperty<TimeToLive, string> TimeToLive
-			= new MessageContextProperty<TimeToLive, string>();
-
-		public static readonly MessageContextProperty<To, string> To
-			= new MessageContextProperty<To, string>();
+		public static readonly MessageContextProperty<ContentType, string> ContentType = new();
+		public static readonly MessageContextProperty<CorrelationId, string> CorrelationId = new();
+		public static readonly MessageContextProperty<CustomBrokeredMessagePropertyNamespace, string> CustomBrokeredMessagePropertyNamespace = new();
+		public static readonly MessageContextProperty<DeliveryCount, int> DeliveryCount = new();
+		public static readonly MessageContextProperty<EnqueuedTimeUtc, DateTime> EnqueuedTimeUtc = new();
+		public static readonly MessageContextProperty<ExpiresAtUtc, DateTime> ExpiresAtUtc = new();
+		public static readonly MessageContextProperty<Label, string> Label = new();
+		public static readonly MessageContextProperty<LockedUntilUtc, DateTime> LockedUntilUtc = new();
+		public static readonly MessageContextProperty<LockToken, string> LockToken = new();
+		public static readonly MessageContextProperty<MessageId, string> MessageId = new();
+		public static readonly MessageContextProperty<ReplyTo, string> ReplyTo = new();
+		public static readonly MessageContextProperty<ReplyToSessionId, string> ReplyToSessionId = new();
+		public static readonly MessageContextProperty<ScheduledEnqueueTimeUtc, DateTime> ScheduledEnqueueTimeUtc = new();
+		public static readonly MessageContextProperty<SequenceNumber, string> SequenceNumber = new();
+		public static readonly MessageContextProperty<SessionId, string> SessionId = new();
+		public static readonly MessageContextProperty<TimeToLive, string> TimeToLive = new();
+		public static readonly MessageContextProperty<To, string> To = new();
 	}
 }

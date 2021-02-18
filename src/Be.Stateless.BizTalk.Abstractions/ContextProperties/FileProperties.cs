@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,16 +26,9 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	// Abstract to support syntax extension by inheriting and declaring new static members.
 	public abstract class FileProperties
 	{
-		public static readonly MessageContextProperty<FileCreationTime, DateTime> FileCreationTime
-			= new MessageContextProperty<FileCreationTime, DateTime>();
-
-		public static readonly MessageContextProperty<Password, string> Password
-			= new MessageContextProperty<Password, string>();
-
-		public static readonly MessageContextProperty<ReceivedFileName, string> ReceivedFileName
-			= new MessageContextProperty<ReceivedFileName, string>();
-
-		public static readonly MessageContextProperty<Username, string> Username
-			= new MessageContextProperty<Username, string>();
+		public static readonly MessageContextProperty<FileCreationTime, DateTime> FileCreationTime = new();
+		public static readonly MessageContextProperty<Password, string> Password = new();
+		public static readonly MessageContextProperty<ReceivedFileName, string> ReceivedFileName = new();
+		public static readonly MessageContextProperty<Username, string> Username = new();
 	}
 }

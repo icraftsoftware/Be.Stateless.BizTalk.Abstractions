@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,6 @@ namespace EDI
 	[Serializable]
 	[PropertyType(nameof(BGM1_1), PropertySchemaNamespaces.Edi, "string", "")]
 	[PropertyGuid(@"2a0ba9ec-e3ed-44b8-a590-344e904f89ac")]
-	[SuppressMessage("Naming", "CA1707:Identifiers should not contain underscores")]
 	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	public sealed class BGM1_1 : MessageContextPropertyBase
 	{
@@ -41,7 +40,7 @@ namespace EDI
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(BGM1_1), PropertySchemaNamespaces.Edi);
+		private static XmlQualifiedName _qualifiedName = new(nameof(BGM1_1), PropertySchemaNamespaces.Edi);
 	}
 
 	[Serializable]
@@ -59,6 +58,6 @@ namespace EDI
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(MKS1), PropertySchemaNamespaces.Edi);
+		private static XmlQualifiedName _qualifiedName = new(nameof(MKS1), PropertySchemaNamespaces.Edi);
 	}
 }

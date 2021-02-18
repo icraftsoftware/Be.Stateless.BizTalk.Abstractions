@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ using System.Xml;
 using FluentAssertions;
 using Microsoft.XLANGs.BaseTypes;
 using Xunit;
+using static FluentAssertions.FluentActions;
 
 namespace Be.Stateless.BizTalk.ContextProperties
 {
@@ -31,16 +32,15 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		[SuppressMessage("ReSharper", "ObjectCreationAsStatement")]
 		public void MessageContextPropertyEnforcesStrongTyping()
 		{
-			Action act = () => new MessageContextProperty<DummyProperty, string>();
-			act.Should().NotThrow();
+			Invoking(() => new MessageContextProperty<DummyProperty, string>()).Should().NotThrow();
 		}
 
 		[Fact]
 		[SuppressMessage("ReSharper", "ObjectCreationAsStatement")]
 		public void MessageContextPropertyThrowsWhenSchemaDeclaredPropertyTypeIsNotRespected()
 		{
-			Action act = () => new MessageContextProperty<DummyProperty, int>();
-			act.Should().Throw<TypeInitializationException>()
+			Invoking(() => new MessageContextProperty<DummyProperty, int>())
+				.Should().Throw<TypeInitializationException>()
 				.WithInnerExceptionExactly<ArgumentException>()
 				.WithMessage("Message context property 'DummyProperty' is of type 'String' but MessageContextProperty<DummyProperty, Int32> declares it of type 'Int32'.");
 		}
@@ -55,7 +55,7 @@ namespace Be.Stateless.BizTalk.ContextProperties
 
 			#endregion
 
-			private static readonly XmlQualifiedName _qualifiedName = new XmlQualifiedName(@"DummyProperty", @"urn:schemas.stateless.be:biztalk:properties:dummy:2012:04");
+			private static readonly XmlQualifiedName _qualifiedName = new(@"DummyProperty", @"urn:schemas.stateless.be:biztalk:properties:dummy:2012:04");
 		}
 	}
 }

@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,22 +25,12 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	// Abstract to support syntax extension by inheriting and declaring new static members.
 	public abstract class BizTalkFactoryProperties
 	{
-		public static readonly MessageContextProperty<ContextBuilderTypeName, string> ContextBuilderTypeName
-			= new MessageContextProperty<ContextBuilderTypeName, string>();
-
-		public static readonly MessageContextProperty<MapTypeName, string> MapTypeName
-			= new MessageContextProperty<MapTypeName, string>();
-
-		public static readonly MessageContextProperty<MessageBodyStreamFactoryTypeName, string> MessageBodyStreamFactoryTypeName
-			= new MessageContextProperty<MessageBodyStreamFactoryTypeName, string>();
-
-		public static readonly MessageContextProperty<MessageType, string> MessageType
-			= new MessageContextProperty<MessageType, string>();
-
-		public static readonly MessageContextProperty<OutboundTransportLocation, string> OutboundTransportLocation
-			= new MessageContextProperty<OutboundTransportLocation, string>();
-
-		public static readonly MessageContextProperty<XmlTranslations, string> XmlTranslations
-			= new MessageContextProperty<XmlTranslations, string>();
+		public static readonly MessageContextProperty<ContextBuilderTypeName, string> ContextBuilderTypeName = new();
+		public static readonly MessageContextProperty<DisableTransportRetries, bool> DisableTransportRetries = new();
+		public static readonly MessageContextProperty<MapTypeName, string> MapTypeName = new();
+		public static readonly MessageContextProperty<MessageBodyStreamFactoryTypeName, string> MessageBodyStreamFactoryTypeName = new();
+		public static readonly MessageContextProperty<MessageType, string> MessageType = new();
+		public static readonly MessageContextProperty<OutboundTransportLocation, string> OutboundTransportLocation = new();
+		public static readonly MessageContextProperty<XmlTranslations, string> XmlTranslations = new();
 	}
 }

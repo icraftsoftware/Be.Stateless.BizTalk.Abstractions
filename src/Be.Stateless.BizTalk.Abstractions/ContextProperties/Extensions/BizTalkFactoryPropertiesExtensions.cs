@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -31,6 +31,18 @@ namespace Be.Stateless.BizTalk.ContextProperties.Extensions
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
 	public static class BizTalkFactoryPropertiesExtensions
 	{
+		public static IBaseMessage DisableTransportRetries(this IBaseMessage message)
+		{
+			message.SetProperty(BtsProperties.RetryCount, 0);
+			return message;
+		}
+
+		public static IBaseMessageContext DisableTransportRetries(this IBaseMessageContext context)
+		{
+			context.SetProperty(BtsProperties.RetryCount, 0);
+			return context;
+		}
+
 		public static IBaseMessage SetMap<T>(this IBaseMessage message) where T : TransformBase
 		{
 			message.SetProperty(BizTalkFactoryProperties.MapTypeName, typeof(T).AssemblyQualifiedName);

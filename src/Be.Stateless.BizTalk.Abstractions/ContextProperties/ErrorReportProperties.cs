@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,45 +35,38 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		/// Error description. Same diagnostic text as is written to the Application Event Log regarding this
 		/// messaging failure.
 		/// </summary>
-		public static readonly MessageContextProperty<Description, string> Description
-			= new MessageContextProperty<Description, string>();
+		public static readonly MessageContextProperty<Description, string> Description = new();
 
 		/// <summary>
 		/// Indicates the type of message that the error contains. This property always contains the value
 		/// FailedMessage, meaning that the error contains the original failed message.
 		/// </summary>
-		public static readonly MessageContextProperty<ErrorType, string> ErrorType
-			= new MessageContextProperty<ErrorType, string>();
+		public static readonly MessageContextProperty<ErrorType, string> ErrorType = new();
 
 		/// <summary>
 		/// Adapter that is associated with the error that generates the error report.
 		/// </summary>
-		public static readonly MessageContextProperty<FailureAdapter, string> FailureAdapter
-			= new MessageContextProperty<FailureAdapter, string>();
+		public static readonly MessageContextProperty<FailureAdapter, string> FailureAdapter = new();
 
 		/// <summary>
 		/// Error code. A hexadecimal value that is reported in the BizTalk Server Administration console.
 		/// </summary>
-		public static readonly MessageContextProperty<FailureCode, string> FailureCode
-			= new MessageContextProperty<FailureCode, string>();
+		public static readonly MessageContextProperty<FailureCode, string> FailureCode = new();
 
 		/// <summary>
 		/// Instance ID of the message or instance that has an error.
 		/// </summary>
-		public static readonly MessageContextProperty<FailureInstanceID, string> FailureInstanceID
-			= new MessageContextProperty<FailureInstanceID, string>();
+		public static readonly MessageContextProperty<FailureInstanceID, string> FailureInstanceID = new();
 
 		/// <summary>
 		/// Message ID of the message that has an error.
 		/// </summary>
-		public static readonly MessageContextProperty<FailureMessageID, string> FailureMessageID
-			= new MessageContextProperty<FailureMessageID, string>();
+		public static readonly MessageContextProperty<FailureMessageID, string> FailureMessageID = new();
 
 		/// <summary>
 		/// Current UTC time when the error report is generated.
 		/// </summary>
-		public static readonly MessageContextProperty<FailureTime, DateTime> FailureTime
-			= new MessageContextProperty<FailureTime, DateTime>();
+		public static readonly MessageContextProperty<FailureTime, DateTime> FailureTime = new();
 
 		/// <summary>
 		/// URI of the receive location where the failure happened.
@@ -82,14 +75,12 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		/// Promoted if the failure happened during inbound processing (in a receive port).
 		/// Not promoted if the failure happened in a send port.
 		/// </remarks>
-		public static readonly MessageContextProperty<InboundTransportLocation, string> InboundTransportLocation
-			= new MessageContextProperty<InboundTransportLocation, string>();
+		public static readonly MessageContextProperty<InboundTransportLocation, string> InboundTransportLocation = new();
 
 		/// <summary>
 		/// Message type of failed message, or empty if message type is indeterminate.
 		/// </summary>
-		public static readonly MessageContextProperty<MessageType, string> MessageType
-			= new MessageContextProperty<MessageType, string>();
+		public static readonly MessageContextProperty<MessageType, string> MessageType = new();
 
 		/// <summary>
 		/// URI of the send location where the failure happened.
@@ -98,14 +89,12 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		/// Promoted if the failure happened during outbound processing (in a send port).
 		/// Not promoted if the failure happened in a receive port.
 		/// </remarks>
-		public static readonly MessageContextProperty<OutboundTransportLocation, string> OutboundTransportLocation
-			= new MessageContextProperty<OutboundTransportLocation, string>();
+		public static readonly MessageContextProperty<OutboundTransportLocation, string> OutboundTransportLocation = new();
 
 		/// <summary>
 		/// Name of the server where the failure happened.
 		/// </summary>
-		public static readonly MessageContextProperty<ProcessingServer, string> ProcessingServer
-			= new MessageContextProperty<ProcessingServer, string>();
+		public static readonly MessageContextProperty<ProcessingServer, string> ProcessingServer = new();
 
 		/// <summary>
 		/// Name of the receive port where the failure happened.
@@ -114,8 +103,7 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		/// Promoted if the failure happened during inbound processing (in a receive port).
 		/// Not promoted if the failure happened in a send port.
 		/// </remarks>
-		public static readonly MessageContextProperty<ReceivePortName, string> ReceivePortName
-			= new MessageContextProperty<ReceivePortName, string>();
+		public static readonly MessageContextProperty<ReceivePortName, string> ReceivePortName = new();
 
 		/// <summary>
 		/// This property provides the ID of the routing failure report that BizTalk Server generates when there
@@ -125,8 +113,7 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		/// process the routing failure report. For example, an orchestration may want to terminate the routing
 		/// failure report after it gets the failed message.
 		/// </summary>
-		public static readonly MessageContextProperty<RoutingFailureReportID, string> RoutingFailureReportID
-			= new MessageContextProperty<RoutingFailureReportID, string>();
+		public static readonly MessageContextProperty<RoutingFailureReportID, string> RoutingFailureReportID = new();
 
 		/// <summary>
 		/// Name of the send port where the failure happened.
@@ -135,7 +122,6 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		/// Promoted if the failure happened during outbound processing (in a send port).
 		/// Not promoted if the failure happened in a receive port.
 		/// </remarks>
-		public static readonly MessageContextProperty<SendPortName, string> SendPortName
-			= new MessageContextProperty<SendPortName, string>();
+		public static readonly MessageContextProperty<SendPortName, string> SendPortName = new();
 	}
 }

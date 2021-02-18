@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,13 +26,8 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	// Abstract to support syntax extension by inheriting and declaring new static members.
 	public abstract class Pop3Properties
 	{
-		public static readonly MessageContextProperty<Date, string> Date
-			= new MessageContextProperty<Date, string>();
-
-		public static readonly MessageContextProperty<From, string> From
-			= new MessageContextProperty<From, string>();
-
-		public static readonly MessageContextProperty<Subject, string> Subject
-			= new MessageContextProperty<Subject, string>();
+		public static readonly MessageContextProperty<Date, string> Date = new();
+		public static readonly MessageContextProperty<From, string> From = new();
+		public static readonly MessageContextProperty<Subject, string> Subject = new();
 	}
 }

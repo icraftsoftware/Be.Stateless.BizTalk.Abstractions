@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ namespace WCF
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(FolderPath), PropertySchemaNamespaces.Wcf);
+		private static XmlQualifiedName _qualifiedName = new(nameof(FolderPath), PropertySchemaNamespaces.Wcf);
 	}
 
 	[Serializable]
@@ -55,6 +55,6 @@ namespace WCF
 		#endregion
 
 		[NonSerialized]
-		private static XmlQualifiedName _qualifiedName = new XmlQualifiedName(nameof(TargetFileName), PropertySchemaNamespaces.Wcf);
+		private static XmlQualifiedName _qualifiedName = new(nameof(TargetFileName), PropertySchemaNamespaces.Wcf);
 	}
 }

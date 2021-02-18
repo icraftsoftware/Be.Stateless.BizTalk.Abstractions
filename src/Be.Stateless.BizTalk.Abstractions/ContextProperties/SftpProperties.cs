@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -54,8 +54,7 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		/// It is detrimental to enable <see cref="BtsProperties.IsDynamicSend"/> when setting this property at runtime.
 		/// </para>
 		/// </remarks>
-		public static readonly MessageContextProperty<FolderPath, string> FolderPath
-			= new MessageContextProperty<FolderPath, string>();
+		public static readonly MessageContextProperty<FolderPath, string> FolderPath = new();
 
 		/// <summary>
 		/// Remote SFTP file name.
@@ -63,7 +62,6 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		/// <remarks>
 		/// It is detrimental to enable <see cref="BtsProperties.IsDynamicSend"/> when setting this property at runtime.
 		/// </remarks>
-		public static readonly MessageContextProperty<TargetFileName, string> TargetFileName
-			= new MessageContextProperty<TargetFileName, string>();
+		public static readonly MessageContextProperty<TargetFileName, string> TargetFileName = new();
 	}
 }
