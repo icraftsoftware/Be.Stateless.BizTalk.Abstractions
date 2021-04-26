@@ -31,6 +31,9 @@ namespace EDI
 	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	public sealed class BGM1_1 : MessageContextPropertyBase
 	{
+		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLang expression.")]
+		private static string PropertyValueType => throw new NotSupportedException();
+
 		#region Base Class Member Overrides
 
 		public override XmlQualifiedName Name => _qualifiedName;
@@ -49,6 +52,9 @@ namespace EDI
 	[SuppressMessage("ReSharper", "InconsistentNaming")]
 	public sealed class MKS1 : MessageContextPropertyBase
 	{
+		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLang expression.")]
+		private static string PropertyValueType => throw new NotSupportedException();
+
 		#region Base Class Member Overrides
 
 		public override XmlQualifiedName Name => _qualifiedName;
