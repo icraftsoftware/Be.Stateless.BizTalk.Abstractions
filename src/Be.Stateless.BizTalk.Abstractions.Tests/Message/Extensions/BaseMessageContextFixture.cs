@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2020 François Chabot
+// Copyright © 2012 - 2021 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 
 #endregion
 
-using System;
 using Be.Stateless.BizTalk.ContextProperties;
 using FluentAssertions;
 using Microsoft.BizTalk.Message.Interop;
@@ -51,10 +50,10 @@ namespace Be.Stateless.BizTalk.Message.Extensions
 			messageContextMock.Object.GetProperty(FileProperties.FileCreationTime).Should().BeNull();
 
 			messageContextMock.Setup(c => c.Read(FileProperties.FileCreationTime.Name, FileProperties.FileCreationTime.Namespace)).Returns("2012-12-01");
-			messageContextMock.Object.GetProperty(FileProperties.FileCreationTime).Should().Be(new DateTime(2012, 12, 1));
+			messageContextMock.Object.GetProperty(FileProperties.FileCreationTime).Should().Be(new(2012, 12, 1));
 
 			messageContextMock.Setup(c => c.Read(FileProperties.FileCreationTime.Name, FileProperties.FileCreationTime.Namespace)).Returns("2017-09-15T10:19:06");
-			messageContextMock.Object.GetProperty(FileProperties.FileCreationTime).Should().Be(new DateTime(2017, 9, 15, 10, 19, 6));
+			messageContextMock.Object.GetProperty(FileProperties.FileCreationTime).Should().Be(new(2017, 9, 15, 10, 19, 6));
 		}
 
 		[Fact]
