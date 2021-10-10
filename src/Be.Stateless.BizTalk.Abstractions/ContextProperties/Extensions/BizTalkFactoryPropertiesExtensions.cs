@@ -33,14 +33,12 @@ namespace Be.Stateless.BizTalk.ContextProperties.Extensions
 	{
 		public static IBaseMessage DisableTransportRetries(this IBaseMessage message)
 		{
-			message.SetProperty(BtsProperties.RetryCount, 0);
-			return message;
+			return message.SetRetryCount(0);
 		}
 
 		public static IBaseMessageContext DisableTransportRetries(this IBaseMessageContext context)
 		{
-			context.SetProperty(BtsProperties.RetryCount, 0);
-			return context;
+			return context.SetRetryCount(0);
 		}
 
 		public static IBaseMessage SetMap<T>(this IBaseMessage message) where T : TransformBase

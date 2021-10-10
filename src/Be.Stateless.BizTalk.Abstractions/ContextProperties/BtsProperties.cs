@@ -21,6 +21,12 @@ using BTS;
 
 namespace Be.Stateless.BizTalk.ContextProperties
 {
+	/// <summary>
+	/// System properties are mostly used internally by BizTalk Messaging Engine and its components. In general, changing the
+	/// values set by the engine for those properties is not recommended, because it may affect the execution logic of the
+	/// engine. However, there are a large number of properties that you can change.
+	/// </summary>
+	/// <seealso href="https://github.com/MicrosoftDocs/biztalk-docs/blob/master/biztalk/core/how-to-use-message-context-properties.md">How to Use Message Context Properties</seealso>
 	[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Public API.")]
 	// Abstract to support syntax extension by inheriting and declaring new static members.
 	public abstract class BtsProperties
