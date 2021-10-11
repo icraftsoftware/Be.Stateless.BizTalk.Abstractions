@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using Be.Stateless.BizTalk.Message.Extensions;
 using Microsoft.BizTalk.Message.Interop;
@@ -30,15 +31,15 @@ namespace Be.Stateless.BizTalk.ContextProperties.Extensions
 	[SuppressMessage("ReSharper", "UnusedType.Global", Justification = "Public API.")]
 	public static class BtsPropertiesExtensions
 	{
-		public static IBaseMessage SetIsDynamicSend(this IBaseMessage message, bool isDynamicSend)
+		public static IBaseMessage EnableDynamicSend(this IBaseMessage message)
 		{
-			message.SetProperty(BtsProperties.IsDynamicSend, isDynamicSend);
+			message.SetProperty(BtsProperties.IsDynamicSend, true);
 			return message;
 		}
 
-		public static IBaseMessageContext SetIsDynamicSend(this IBaseMessageContext context, bool isDynamicSend)
+		public static IBaseMessageContext EnableDynamicSend(this IBaseMessageContext context)
 		{
-			context.SetProperty(BtsProperties.IsDynamicSend, isDynamicSend);
+			context.SetProperty(BtsProperties.IsDynamicSend, true);
 			return context;
 		}
 
@@ -54,18 +55,6 @@ namespace Be.Stateless.BizTalk.ContextProperties.Extensions
 			return context;
 		}
 
-		public static IBaseMessage SetOutboundTransportLocation(this IBaseMessage message, string outboundTransportLocation)
-		{
-			message.SetProperty(BtsProperties.OutboundTransportLocation, outboundTransportLocation);
-			return message;
-		}
-
-		public static IBaseMessageContext SetOutboundTransportLocation(this IBaseMessageContext context, string outboundTransportLocation)
-		{
-			context.SetProperty(BtsProperties.OutboundTransportLocation, outboundTransportLocation);
-			return context;
-		}
-
 		public static IBaseMessage SetRetryCount(this IBaseMessage message, int retryCount)
 		{
 			message.SetProperty(BtsProperties.RetryCount, retryCount);
@@ -78,51 +67,51 @@ namespace Be.Stateless.BizTalk.ContextProperties.Extensions
 			return context;
 		}
 
-		public static IBaseMessage SetRetryInterval(this IBaseMessage message, int retryInterval)
+		public static IBaseMessage SetRetryInterval(this IBaseMessage message, TimeSpan interval)
 		{
-			message.SetProperty(BtsProperties.RetryInterval, retryInterval);
+			message.SetProperty(BtsProperties.RetryInterval, (int) interval.TotalMinutes);
 			return message;
 		}
 
-		public static IBaseMessageContext SetRetryInterval(this IBaseMessageContext context, int retryInterval)
+		public static IBaseMessageContext SetRetryInterval(this IBaseMessageContext context, TimeSpan interval)
 		{
-			context.SetProperty(BtsProperties.RetryInterval, retryInterval);
+			context.SetProperty(BtsProperties.RetryInterval, (int) interval.TotalMinutes);
 			return context;
 		}
 
-		public static IBaseMessage SetRouteMessageOnFailure(this IBaseMessage message, bool routeMessageOnFailure)
+		public static IBaseMessage RouteMessageOnFailure(this IBaseMessage message)
 		{
-			message.SetProperty(BtsProperties.RouteMessageOnFailure, routeMessageOnFailure);
+			message.SetProperty(BtsProperties.RouteMessageOnFailure, true);
 			return message;
 		}
 
-		public static IBaseMessageContext SetRouteMessageOnFailure(this IBaseMessageContext context, bool routeMessageOnFailure)
+		public static IBaseMessageContext RouteMessageOnFailure(this IBaseMessageContext context)
 		{
-			context.SetProperty(BtsProperties.RouteMessageOnFailure, routeMessageOnFailure);
+			context.SetProperty(BtsProperties.RouteMessageOnFailure, true);
 			return context;
 		}
 
-		public static IBaseMessage SetSuppressRoutingFailureDiagnosticInfo(this IBaseMessage message, bool suppressRoutingFailureDiagnosticInfo)
+		public static IBaseMessage SuppressRoutingFailureDiagnosticInfo(this IBaseMessage message)
 		{
-			message.SetProperty(BtsProperties.SuppressRoutingFailureDiagnosticInfo, suppressRoutingFailureDiagnosticInfo);
+			message.SetProperty(BtsProperties.SuppressRoutingFailureDiagnosticInfo, true);
 			return message;
 		}
 
-		public static IBaseMessageContext SetSuppressRoutingFailureDiagnosticInfo(this IBaseMessageContext context, bool suppressRoutingFailureDiagnosticInfo)
+		public static IBaseMessageContext SuppressRoutingFailureDiagnosticInfo(this IBaseMessageContext context)
 		{
-			context.SetProperty(BtsProperties.SuppressRoutingFailureDiagnosticInfo, suppressRoutingFailureDiagnosticInfo);
+			context.SetProperty(BtsProperties.SuppressRoutingFailureDiagnosticInfo, true);
 			return context;
 		}
 
-		public static IBaseMessage SetSuspendMessageOnRoutingFailure(this IBaseMessage message, bool suspendMessageOnRoutingFailure)
+		public static IBaseMessage SuspendMessageOnRoutingFailure(this IBaseMessage message)
 		{
-			message.SetProperty(BtsProperties.SuspendMessageOnRoutingFailure, suspendMessageOnRoutingFailure);
+			message.SetProperty(BtsProperties.SuspendMessageOnRoutingFailure, true);
 			return message;
 		}
 
-		public static IBaseMessageContext SetSuspendMessageOnRoutingFailure(this IBaseMessageContext context, bool suspendMessageOnRoutingFailure)
+		public static IBaseMessageContext SuspendMessageOnRoutingFailure(this IBaseMessageContext context)
 		{
-			context.SetProperty(BtsProperties.SuspendMessageOnRoutingFailure, suspendMessageOnRoutingFailure);
+			context.SetProperty(BtsProperties.SuspendMessageOnRoutingFailure, true);
 			return context;
 		}
 	}
