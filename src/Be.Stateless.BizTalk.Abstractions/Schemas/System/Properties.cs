@@ -30,7 +30,7 @@ namespace BTS
 	[PropertyGuid(@"95e6968f-1887-40b4-aeaa-8ab36acf28ed")]
 	public sealed class ActualRetryCount : MessageContextPropertyBase
 	{
-		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLang expression.")]
+		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLANG/s expressions.")]
 		private static string PropertyValueType => throw new NotSupportedException();
 
 		#region Base Class Member Overrides
@@ -50,7 +50,7 @@ namespace BTS
 	[PropertyGuid(@"07b9d12b-4f3c-4ea2-b3ae-b7505351a59b")]
 	public sealed class ReceiveLocationName : MessageContextPropertyBase
 	{
-		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLang expression.")]
+		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLANG/s expressions.")]
 		private static string PropertyValueType => throw new NotSupportedException();
 
 		#region Base Class Member Overrides
@@ -70,7 +70,7 @@ namespace BTS
 	[PropertyGuid(@"ae8c8465-2cd7-444b-b949-b1f639777a8e")]
 	public sealed class RouteMessageOnFailure : MessageContextPropertyBase
 	{
-		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLang expression.")]
+		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLANG/s expressions.")]
 		private static string PropertyValueType => throw new NotSupportedException();
 
 		#region Base Class Member Overrides
@@ -90,7 +90,7 @@ namespace BTS
 	[PropertyGuid(@"1b1e28aa-861a-4705-866b-6595ef537e6f")]
 	public sealed class WasSolicitResponse : MessageContextPropertyBase
 	{
-		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLang expression.")]
+		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLANG/s expressions.")]
 		private static string PropertyValueType => throw new NotSupportedException();
 
 		#region Base Class Member Overrides

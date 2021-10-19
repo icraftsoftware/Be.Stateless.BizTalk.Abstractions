@@ -30,7 +30,7 @@ namespace WCF
 	[PropertyGuid(@"424bda96-fd66-456e-8688-9c18f7f46464")]
 	public sealed class FolderPath : MessageContextPropertyBase
 	{
-		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLang expression.")]
+		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLANG/s expressions.")]
 		private static string PropertyValueType => throw new NotSupportedException();
 
 		#region Base Class Member Overrides
@@ -50,7 +50,7 @@ namespace WCF
 	[PropertyGuid(@"e9cd6173-8f58-45dd-85ab-d49ed07bea87")]
 	public sealed class TargetFileName : MessageContextPropertyBase
 	{
-		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLang expression.")]
+		[SuppressMessage("ReSharper", "UnusedMember.Local", Justification = "To be able to use the property in an XLANG/s expressions.")]
 		private static string PropertyValueType => throw new NotSupportedException();
 
 		#region Base Class Member Overrides
