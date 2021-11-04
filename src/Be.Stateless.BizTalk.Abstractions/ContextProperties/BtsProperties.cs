@@ -60,7 +60,7 @@ namespace Be.Stateless.BizTalk.ContextProperties
 		public static readonly MessageContextProperty<SPName, string> SendPortName = new();
 		public static readonly MessageContextProperty<SuppressRoutingFailureDiagnosticInfo, bool> SuppressRoutingFailureDiagnosticInfo = new();
 		public static readonly MessageContextProperty<SuspendMessageOnRoutingFailure, bool> SuspendMessageOnRoutingFailure = new();
-		public static readonly MessageContextProperty<TransmitWorkID, string> TransmitWorkId = new();
+		public static readonly MessageContextProperty<TransmitWorkID, string> TransmitWorkID = new();
 		public static readonly MessageContextProperty<WasSolicitResponse, bool> WasSolicitResponse = new();
 	}
 }
