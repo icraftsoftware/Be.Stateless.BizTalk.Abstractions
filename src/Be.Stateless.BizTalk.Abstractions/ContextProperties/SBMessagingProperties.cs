@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2021 François Chabot
+// Copyright © 2012 - 2022 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,7 +30,6 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	{
 		public static readonly MessageContextProperty<ContentType, string> ContentType = new();
 		public static readonly MessageContextProperty<CorrelationId, string> CorrelationId = new();
-		public static readonly MessageContextProperty<CustomBrokeredMessagePropertyNamespace, string> CustomBrokeredMessagePropertyNamespace = new();
 		public static readonly MessageContextProperty<DeliveryCount, int> DeliveryCount = new();
 		public static readonly MessageContextProperty<EnqueuedTimeUtc, DateTime> EnqueuedTimeUtc = new();
 		public static readonly MessageContextProperty<ExpiresAtUtc, DateTime> ExpiresAtUtc = new();

@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2012 - 2021 François Chabot
+// Copyright © 2012 - 2022 François Chabot
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,6 +27,7 @@ namespace Be.Stateless.BizTalk.ContextProperties
 	public abstract class WcfProperties
 	{
 		public static readonly MessageContextProperty<Action, string> Action = new();
+		public static readonly MessageContextProperty<CustomBrokeredPropertyNamespace, string> CustomBrokeredPropertyNamespace = new();
 		public static readonly MessageContextProperty<Headers, string> Headers = new();
 		public static readonly MessageContextProperty<HttpHeaders, string> HttpHeaders = new();
 		public static readonly MessageContextProperty<HttpMethodAndUrl, string> HttpMethodAndUrl = new();
